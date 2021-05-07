@@ -15,4 +15,4 @@ RUN sudo apt-get install -y libc6-dev-armhf-cross linux-libc-dev-armhf-cross \
 RUN sudo apt-get install -y libc6-dev-arm64-cross linux-libc-dev-arm64-cross \
     g++-aarch64-linux-gnu
 
-RUN sudo sed -i s/1920x1080/1440x800/ /usr/bin/start-vnc-session.sh
+RUN sudo sed -i s/1920x1080/1280x720/ /usr/bin/start-vnc-session.sh
