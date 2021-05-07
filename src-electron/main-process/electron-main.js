@@ -6,7 +6,12 @@ try {
   }
 } catch (_) { }
 
-app.commandLine.appendSwitch('disable-dev-shm-usage');
+try {
+  if (process.platform==='linux') {
+    // 20210508 norihisa itou - for develop on gitpod
+    app.commandLine.appendSwitch('disable-dev-shm-usage');
+  }
+} catch (_) { }
 
 /**
  * Set `__statics` path to static files in production;
