@@ -1,9 +1,6 @@
-FROM gitpod/workspace-full
-USER gitpod
-WORKDIR /app
+FROM gitpod/workspace-full:latest
 
-# RUN apk update
-# RUN yarn install
 ENV PATH $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH
-# RUN yarn global add @quasar/cli
-RUN yarn global add n
+
+RUN bash -c ". .nvm/nvm.sh && nvm install 12 && nvm use 12 && nvm alias default 12"
+RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
