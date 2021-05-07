@@ -7,7 +7,7 @@ RUN sudo apt-get update
 RUN bash -c ". .nvm/nvm.sh && nvm install 12 && nvm use 12 && nvm alias default 12"
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 
-RUN sudo apt-get install -y libnss3
+RUN sudo apt-get install -y libnss3 libgbm-dev
 
 RUN sudo apt-get install -y libc6-dev-armhf-cross linux-libc-dev-armhf-cross \
     g++-arm-linux-gnueabihf
