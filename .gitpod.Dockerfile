@@ -7,11 +7,7 @@ RUN sudo apt-get update
 RUN bash -c ". .nvm/nvm.sh && nvm install 12 && nvm use 12 && nvm alias default 12"
 RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 
-RUN sudo apt-get install build-essential clang libdbus-1-dev libgtk-3-dev \
-    libnotify-dev libgnome-keyring-dev \
-    libasound2-dev libcap-dev libcups2-dev libxtst-dev \
-    libxss1 libnss3-dev gcc-multilib g++-multilib curl \
-    gperf bison python-dbusmock openjdk-8-jre
+RUN sudo apt-get install libgtk-3-dev libxss1 libnss3-dev libasound2 x11-apps x11-utils x11-xserver-utils fonts-ipafont
 
 RUN sudo apt-get install libc6-dev-armhf-cross linux-libc-dev-armhf-cross \
     g++-arm-linux-gnueabihf
