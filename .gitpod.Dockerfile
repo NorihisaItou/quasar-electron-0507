@@ -9,8 +9,8 @@ RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
 
 RUN sudo apt-get install -y libnss3
 
-RUN sudo apt-get install libc6-dev-armhf-cross linux-libc-dev-armhf-cross \
+RUN sudo apt-get install -y libc6-dev-armhf-cross linux-libc-dev-armhf-cross \
     g++-arm-linux-gnueabihf
 
-RUN sudo apt-get install libc6-dev-arm64-cross linux-libc-dev-arm64-cross \
+RUN sudo apt-get install -y libc6-dev-arm64-cross linux-libc-dev-arm64-cross \
     g++-aarch64-linux-gnu
